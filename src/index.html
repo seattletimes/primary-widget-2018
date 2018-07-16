@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <%= t.include("partials/_head.html", grunt.data.json) %>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <responsive-child>
+      <div class="container">
+        <header>
+          <h2>
+            Seattle Times
+            <img src="./assets/star-banner.svg">
+            Primary 2018
+          </h2>
+        </header>
+        <div class="races loading">
+          loading...
+        </div>
+        <a class="read-more" target="_parent">Read more &raquo;</a>
+      </div>
+    </responsive-child>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
