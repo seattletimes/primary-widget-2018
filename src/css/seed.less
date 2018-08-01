@@ -18,6 +18,11 @@ header {
   font-family: @df-sans;
   .display-flex();
 
+  @media @mobile {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
   &.loading {
     .justify-content(center);
     .align-items(center);
@@ -89,6 +94,6 @@ header {
 .read-more {
   text-align: right;
   display: block;
-  padding: 16px;
+  padding: 0px 10px;
   font-family: @df-sans;
 }
