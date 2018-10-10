@@ -18,7 +18,7 @@ var raceTemplate = data => `
       <li>
         <span class="name ${c.called ? "called" : ""}">${c.candidate}</span>
         <span class="divider"></span>
-        <span class="result">${c.votes.toLocaleString().replace(/\.0+$/, "")} (${(c.votes / data.total * 100).toFixed(1)}%)</span>
+        <span class="result">${c.votes.toLocaleString().replace(/\.0+$/, "")}</span>
       `).join("")}
     </ul>
   </section>
